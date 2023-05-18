@@ -1,0 +1,125 @@
+body{
+    overflow-x:hidden;
+}
+
+
+
+.position-absolute{
+    left:200px;
+}
+
+@media(max-width:800px){
+    .position-absolute{
+        left:0px;
+    }
+}
+
+
+
+
+.new-color li a{
+    color:#8A8A8A;
+}
+
+.new-color li a:hover{
+    color:black;
+}
+
+.dropdownposition,.buttonposition{
+    position:relative;
+    left:400px;
+}
+
+
+@media(max-width:1200px){
+    .dropdownposition,.buttonposition{
+        position:relative;
+        left:250px;
+    }
+    
+}
+
+@media(max-width:1050px){
+    .dropdownposition,.buttonposition{
+        position:relative;
+        left:150px;
+    }
+    
+}
+
+@media(max-width:950px){
+    .dropdownposition,.buttonposition{
+        position:relative;
+        left:0px;
+    }
+    
+}
+
+.model-lg{
+    width:736px;
+}
+
+.cardwidth{
+    width:692px;
+}
+
+
+@media(max-width:710px){
+    *{
+        margin:0;
+        padding:0;
+    }
+  .shownavbar{
+    display: none;
+  }
+  .mainimg{
+    min-width:100%;
+    /* min-width:700px; */
+    height: 150%;
+  }
+  .cardwidth{
+    width: 100%;
+
+  }
+  .loginpen{
+    width:100%;
+}
+
+.bodynavbar{
+    display: none;
+}
+
+
+}
+
+
+.searchicon{
+position: absolute;
+left: 6%;
+top: 26%;
+}
+
+.mainimagetext{
+    /* fontWeight:"700",fontSize: "36px",lineHeight:"47px" */
+height: 47px;
+/* left: 120px;
+top: 230px; */
+left: calc(10% + 10px);
+bottom: calc(20% + 10px);
+color:white;
+z-index: 2;
+line-height: 20px;
+}
+
+.mainimagetext::first-line{
+    font-weight: 700;
+    font-size: 36px;
+}
+
+img {
+    filter: brightness(60%);
+  }
+
+.loginpen{
+    width:0px;
+}
