@@ -4,10 +4,10 @@ import joingroup from "./img/jongroup2.png";
 import React, { useState, useEffect } from 'react';
 
 const Bodynavbar =()=>{
-  const [isElementVisible, setIsElementVisible] = useState(window.innerWidth < 710);
+  const [isElementVisible, setIsElementVisible] = useState(window.innerWidth < 768);
   const handleWindowResize = () => {
     const screenWidth = window.innerWidth;
-    if (screenWidth < 710) { // Set your desired desktop screen width threshold
+    if (screenWidth < 768) { // Set your desired desktop screen width threshold
       setIsElementVisible(true);
     } else {
       setIsElementVisible(false);
@@ -22,8 +22,8 @@ const Bodynavbar =()=>{
   }, []);
 
     return(
-    <div class="position-absolute mt-5 ">
-     {isElementVisible && <div className="d-flex justify-content-between mx-4 "><a class="nav-link active pt-2" aria-current="page" href="#">All Posts(32)</a>
+    <div class="position-relative movediv mt-5 ">
+     {isElementVisible ?<div className="d-flex justify-content-between mx-4 "><a class="nav-link active pt-2" aria-current="page" href="#">All Posts(32)</a>
       <div class="dropdown">
   <button class="btn  dropdown-toggle" style={{backgroundColor:"#F1F3F5"}} type="button" data-bs-toggle="dropdown" aria-expanded="false">
   Filter: All
@@ -34,8 +34,7 @@ const Bodynavbar =()=>{
     <li><a class="dropdown-item" href="#">Something else here</a></li>
   </ul>
 </div>
-      </div>} 
-    <ul class="nav nav-underline new-color bodynavbar">
+      </div>: <ul class="nav nav-underline new-color bodynavbar">
     <li class="nav-item ">
     <a class="nav-link active" aria-current="page" href="#">All Posts(32)</a>
   </li>
@@ -60,7 +59,8 @@ const Bodynavbar =()=>{
         <li><a class="dropdown-item" href="#">Something else here</a></li>
      </ul>
     <button type="button" class="btn btn-primary buttonposition"> <img src={joingroup} className="me-2" style={{width:"25px",backgroundColor:"#0d6efd",color:"whitesmoke"}}></img>Join Group</button>
-  </ul>
+  </ul>} 
+   
   <Articlecard></Articlecard>
     </div>
     )

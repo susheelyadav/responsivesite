@@ -96,7 +96,7 @@ const Articlecard = () => {
           </div>
         </div>
 
-        <div class="card mt-3 caedwidth" >
+        <div class="card mt-3 cardwidth" >
           <img src={third} class="card-img-top img-fluid" alt="..." />
           <div class="card-body">
             <p class="card-text">🗓️ Meetup</p>

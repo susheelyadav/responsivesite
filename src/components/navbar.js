@@ -7,15 +7,15 @@ import searchlogo from "./img/search.png";
 const Navbar = () => {
   return (
     <>
-      <nav class="navbar bg-body-tertiary py-2  text-bg-light shownavbar">
+      <nav class="navbar bg-body-tertiary py-xl-2 py-md-6 text-bg-light shownavbar">
         <div class="container-fluid row">
           <a class="navbar-brand col ms-5"><img src={logo} style={{width:"130px"}}></img></a>
           <form class="d-flex col position-relative" role="search">
-          <img src={searchlogo} className="searchicon" ></img>
+          {/* <img src={searchlogo} className="searchicon" ></img> */}
             <input
               class="form-control me-2 rounded-pill"
               type="search"
-              placeholder="     Search for your favorite groups in ATG"
+              placeholder="    Search for your favorite groups in ATG"
               aria-label="Search"
             />
           </form>

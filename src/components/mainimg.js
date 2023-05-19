@@ -1,6 +1,7 @@
 import mainimg from "./img/firstimg.png";
 import laptop2 from "./img/laptop2.png";
 import arrow from "./img/arrow.png";
+import "./style/style.css";
 import React, { useState, useEffect } from 'react';
 
 
@@ -36,8 +37,9 @@ const Firstimg=()=>{
             <p className="mainimgfirst">Computer Engineering</p>
             <p>142,765 Computer Engineers follow this</p>
         </div>
+        
         <img src={imageSrc?laptop2:mainimg} className="img-fluid mainimg" style={{ filter: "brightness(60%)"}} ></img>
-        {/* <img src={laptop2} className="img-fluid mainimg position-relative" srcSet={`${laptop2} 710w, ${mainimg} 950w`} sizes="(max-width: 710px) , (max-width: 950px)" ></img> */}
+         {/* <img src={laptop2} className="img-fluid mainimg position-relative" srcSet={`${laptop2} 710w, ${mainimg} 950w`} sizes="(max-width: 710px) , (max-width: 950px)" ></img> */}
 
         </div>
         </>

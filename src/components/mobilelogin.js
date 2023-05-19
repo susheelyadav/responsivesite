@@ -27,7 +27,7 @@ useEffect(() => {
 
 return(
     <>
-    {isImageVisible && <img src={LOGIN} class="position-fixed bottom-0 end-0 my-3 me-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"alt="Your Image" />}
+    {isImageVisible && <img src={LOGIN} class="position-fixed bottom-0 end-0 my-3 me-3 imgbr" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"alt="Your Image" />}
 
 <div class="offcanvas offcanvas-bottom "  tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
   <div class="offcanvas-header">

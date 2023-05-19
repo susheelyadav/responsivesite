@@ -3,18 +3,48 @@ body{
 }
 
 
-
-.position-absolute{
-    left:200px;
+.movediv{
+    left:15%;
 }
 
-@media(max-width:800px){
-    .position-absolute{
+
+@media(max-width:1300px){
+    .movediv{
+        left:10%;
+    }
+}
+
+@media(max-width:1027px){
+    .movediv{
+        left:5%;
+    }
+}
+
+@media(max-width:790px){
+    .movediv{
         left:0px;
     }
 }
 
+.dropdownposition,.buttonposition{
+    position:relative;
+    left:28%;
+}
 
+@media(max-width:1300px){
+    .dropdownposition,.buttonposition{
+        position:relative;
+        left:28%;
+    }
+}
+
+@media(max-width:1200px){
+    .dropdownposition,.buttonposition{
+        position:relative;
+        left:0px;
+    }
+    
+}
 
 
 .new-color li a{
@@ -25,35 +55,7 @@ body{
     color:black;
 }
 
-.dropdownposition,.buttonposition{
-    position:relative;
-    left:400px;
-}
 
-
-@media(max-width:1200px){
-    .dropdownposition,.buttonposition{
-        position:relative;
-        left:250px;
-    }
-    
-}
-
-@media(max-width:1050px){
-    .dropdownposition,.buttonposition{
-        position:relative;
-        left:150px;
-    }
-    
-}
-
-@media(max-width:950px){
-    .dropdownposition,.buttonposition{
-        position:relative;
-        left:0px;
-    }
-    
-}
 
 .model-lg{
     width:736px;
@@ -62,6 +64,29 @@ body{
 .cardwidth{
     width:692px;
 }
+
+.mainimg{
+    min-width:100%;
+  }
+
+@media(max-width:970px){
+    .mainimg{
+        min-width:100%;
+        /* min-width:700px; */
+        /* height: 150%; */
+      }
+}
+
+
+@media(max-width:894px){
+    .mainimg{
+        min-width:100%;
+        /* min-width:700px; */
+        /* height: 150%; */
+      }
+}
+
+
 
 
 @media(max-width:710px){
@@ -75,7 +100,7 @@ body{
   .mainimg{
     min-width:100%;
     /* min-width:700px; */
-    height: 150%;
+    /* height: 150%; */
   }
   .cardwidth{
     width: 100%;
@@ -147,11 +172,7 @@ line-height: 20px;
 }
 
 .imgbr{
-    filter: brightness(300%);
+    filter: brightness(100%);
 }
 
 
-/* .container-sm {
-    --bs-gutter-x: 0;
-    --bs-gutter-y: 0;
-} */
