@@ -150,3 +150,8 @@ line-height: 20px;
     filter: brightness(300%);
 }
 
+
+/* .container-sm {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+} */

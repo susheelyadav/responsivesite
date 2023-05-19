@@ -60,7 +60,7 @@ const Articlecard = () => {
               <img src={views}  style={{ marginLeft: "318px"}} className="me-2 mt-1 align-middle hideimg" alt="..." />
               <span className="align-middle fw-medium  hideimg" style={{fontSize:"14px"}}>1.4k views</span>
                   
-              { imageSrc ? <button className="p-2" style ={{backgroundColor:"#F1F3F5",color:"#212529",marginLeft:"7rem",border:"none"}}><img className="pe-2" src={sharebutton}   alt="..." />Share</button>:<img src={sharebutton} className="ms-5"  alt="..." />
+              { imageSrc ? <button className="p-2" style ={{backgroundColor:"#F1F3F5",color:"#212529",marginLeft:"4rem",border:"none"}}><img className="pe-2" src={sharebutton}   alt="..." />Share</button>:<img src={sharebutton} className="ms-5"  alt="..." />
       }
             </div>
           </div>
@@ -90,7 +90,7 @@ const Articlecard = () => {
               <img src={views}  style={{ marginLeft: "318px"}} className="me-2 mt-1 align-middle  hideimg" alt="..." />
               <span className="align-middle fw-medium  hideimg" style={{fontSize:"14px"}}>1.4k views</span>
                   
-              { imageSrc ? <button className="p-2" style ={{backgroundColor:"#F1F3F5",color:"#212529",marginLeft:"7rem",border:"none"}}><img className="pe-2" src={sharebutton}   alt="..." />Share</button>:<img src={sharebutton} className="ms-5"  alt="..." />
+              { imageSrc ? <button className="p-2" style ={{backgroundColor:"#F1F3F5",color:"#212529",marginLeft:"4rem",border:"none"}}><img className="pe-2" src={sharebutton}   alt="..." />Share</button>:<img src={sharebutton} className="ms-5"  alt="..." />
       }
             </div>
           </div>
@@ -115,7 +115,7 @@ const Articlecard = () => {
               <img src={views}  style={{ marginLeft: "318px"}} className="me-2 mt-1 align-middle hideimg" alt="..." />
               <span className="align-middle fw-medium hideimg" style={{fontSize:"14px"}}>1.4k views</span>
                    
-             { imageSrc ? <button className="p-2" style ={{backgroundColor:"#F1F3F5",color:"#212529",marginLeft:"8rem",border:"none"}}><img className="pe-2" src={sharebutton}   alt="..." />Share</button>:<img src={sharebutton} className="ms-5"  alt="..." />
+             { imageSrc ? <button className="p-2" style ={{backgroundColor:"#F1F3F5",color:"#212529",marginLeft:"5rem",border:"none"}}><img className="pe-2" src={sharebutton}   alt="..." />Share</button>:<img src={sharebutton} className="ms-5"  alt="..." />
       }
             </div>
           </div>
@@ -140,7 +140,7 @@ const Articlecard = () => {
               <img src={views}  style={{ marginLeft: "318px"}} className="me-2 mt-1 align-middle hideimg" alt="..." />
               <span className="align-middle fw-medium hideimg" style={{fontSize:"14px"}}>1.4k views</span>
               
-             { imageSrc ? <button className="p-2" style ={{backgroundColor:"#F1F3F5",color:"#212529",marginLeft:"7rem",border:"none"}}><img className="pe-2" src={sharebutton}   alt="..." />Share</button>:<img src={sharebutton} className="ms-5"  alt="..." />
+             { imageSrc ? <button className="p-2" style ={{backgroundColor:"#F1F3F5",color:"#212529",marginLeft:"4rem",border:"none"}}><img className="pe-2" src={sharebutton}   alt="..." />Share</button>:<img src={sharebutton} className="ms-5"  alt="..." />
       }       </div>
           </div>
         </div>
