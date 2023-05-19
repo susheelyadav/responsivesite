@@ -89,6 +89,15 @@ body{
     display: none;
 }
 
+.bodynavhide{
+    display:block;
+}
+
+.hideimg{
+    display: none;
+}
+
+
 
 }
 
@@ -111,15 +120,33 @@ z-index: 2;
 line-height: 20px;
 }
 
-.mainimagetext::first-line{
-    font-weight: 700;
-    font-size: 36px;
+.mainimgfirst{
+   font-size: 32px;
+   font-weight: 700;
 }
 
-img {
+/* img {
     filter: brightness(60%);
-  }
+  } */
 
 .loginpen{
     width:0px;
 }
+
+.bodynavhide{
+    display: none;
+}
+
+.offcanvas{
+    --bs-offcanvas-height: 80vh;
+}
+
+.arrowimg{
+    /* filter: hue-rotate(180deg); */
+    filter: saturate(50%);
+}
+
+.imgbr{
+    filter: brightness(300%);
+}
+

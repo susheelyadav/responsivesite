@@ -1,11 +1,29 @@
 import "./style/style.css"
 import Articlecard from "./articlecard";
 import joingroup from "./img/jongroup2.png";
+import React, { useState, useEffect } from 'react';
 
 const Bodynavbar =()=>{
+  const [isElementVisible, setIsElementVisible] = useState(window.innerWidth < 710);
+  const handleWindowResize = () => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth < 710) { // Set your desired desktop screen width threshold
+      setIsElementVisible(true);
+    } else {
+      setIsElementVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowResize);
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
+
     return(
     <div class="position-absolute mt-5 ">
-      <div className="d-flex justify-content-between mx-4"><a class="nav-link active pt-2" aria-current="page" href="#">All Posts(32)</a>
+     {isElementVisible && <div className="d-flex justify-content-between mx-4 "><a class="nav-link active pt-2" aria-current="page" href="#">All Posts(32)</a>
       <div class="dropdown">
   <button class="btn  dropdown-toggle" style={{backgroundColor:"#F1F3F5"}} type="button" data-bs-toggle="dropdown" aria-expanded="false">
   Filter: All
@@ -16,7 +34,7 @@ const Bodynavbar =()=>{
     <li><a class="dropdown-item" href="#">Something else here</a></li>
   </ul>
 </div>
-      </div>
+      </div>} 
     <ul class="nav nav-underline new-color bodynavbar">
     <li class="nav-item ">
     <a class="nav-link active" aria-current="page" href="#">All Posts(32)</a>

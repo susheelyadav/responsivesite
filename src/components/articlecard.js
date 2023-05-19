@@ -9,20 +9,20 @@ import profile3 from "./img/profile3.png";
 import profile4 from "./img/profile4.png";
 import calender from "./img/calnder.png";
 import location from "./img/newlocation.png";
-import LOGIN from "./img/LOGIN.png";
-import { logRoles } from "@testing-library/react";
+
+import Mobilelogin from "./mobilelogin";
 import React, { useState, useEffect } from 'react';
 
 
 const Articlecard = () => {
-  const [isImageVisible, setIsImageVisible] = useState(false);
+  const [imageSrc, setImageSrc] = useState(window.innerWidth < 710);
 
   const handleWindowResize = () => {
     const screenWidth = window.innerWidth;
-    if (screenWidth < 710) { // Set your desired screen width threshold
-      setIsImageVisible(true);
+    if (screenWidth < 710) {
+      setImageSrc(true);
     } else {
-      setIsImageVisible(false);
+      setImageSrc(false);
     }
   };
 
@@ -33,7 +33,6 @@ const Articlecard = () => {
     };
   }, []);
 
- 
   return (
     <>
       <div className="container-fluid mb-5">
@@ -58,10 +57,11 @@ const Articlecard = () => {
             <div class="card-text">
               <img src={profile1} alt="..." />
               <span style={{ fontWeight: "600" }} className="ms-2">Sarthak Kamra</span>
-              <img src={views}  style={{ marginLeft: "318px"}} className="me-2 mt-1 align-middle" alt="..." />
-              <span className="align-middle fw-medium" style={{fontSize:"14px"}}>1.4k views</span>
-            
-              <img src={sharebutton} className="ms-5" alt="..." />
+              <img src={views}  style={{ marginLeft: "318px"}} className="me-2 mt-1 align-middle hideimg" alt="..." />
+              <span className="align-middle fw-medium  hideimg" style={{fontSize:"14px"}}>1.4k views</span>
+                  
+              { imageSrc ? <button className="p-2" style ={{backgroundColor:"#F1F3F5",color:"#212529",marginLeft:"7rem",border:"none"}}><img className="pe-2" src={sharebutton}   alt="..." />Share</button>:<img src={sharebutton} className="ms-5"  alt="..." />
+      }
             </div>
           </div>
         </div>
@@ -87,9 +87,11 @@ const Articlecard = () => {
             <div class="card-text">
               <img src={profile} alt="..." />
               <span style={{ fontWeight: "600" }} className="ms-2">Sarthak Kamra</span>
-              <img src={views}  style={{ marginLeft: "318px"}} className="me-2 mt-1 align-middle" alt="..." />
-              <span className="align-middle fw-medium" style={{fontSize:"14px"}}>1.4k views</span>
-              <img src={sharebutton} className="ms-5" alt="..." />
+              <img src={views}  style={{ marginLeft: "318px"}} className="me-2 mt-1 align-middle  hideimg" alt="..." />
+              <span className="align-middle fw-medium  hideimg" style={{fontSize:"14px"}}>1.4k views</span>
+                  
+              { imageSrc ? <button className="p-2" style ={{backgroundColor:"#F1F3F5",color:"#212529",marginLeft:"7rem",border:"none"}}><img className="pe-2" src={sharebutton}   alt="..." />Share</button>:<img src={sharebutton} className="ms-5"  alt="..." />
+      }
             </div>
           </div>
         </div>
@@ -110,12 +112,15 @@ const Articlecard = () => {
             <div class="card-text">
               <img src={profile3} alt="..." />
               <span style={{ fontWeight: "600" }} className="ms-2">Joseph Gray</span>
-              <img src={views}  style={{ marginLeft: "318px"}} className="me-2 mt-1 align-middle" alt="..." />
-              <span className="align-middle fw-medium" style={{fontSize:"14px"}}>1.4k views</span>
-              <img src={sharebutton} className="ms-5" alt="..." />
+              <img src={views}  style={{ marginLeft: "318px"}} className="me-2 mt-1 align-middle hideimg" alt="..." />
+              <span className="align-middle fw-medium hideimg" style={{fontSize:"14px"}}>1.4k views</span>
+                   
+             { imageSrc ? <button className="p-2" style ={{backgroundColor:"#F1F3F5",color:"#212529",marginLeft:"8rem",border:"none"}}><img className="pe-2" src={sharebutton}   alt="..." />Share</button>:<img src={sharebutton} className="ms-5"  alt="..." />
+      }
             </div>
           </div>
         </div>
+      
 
         <div class="card mt-3 cardwidth" >
           <div class="card-body">
@@ -132,18 +137,19 @@ const Articlecard = () => {
             <div class="card-text">
               <img src={profile4} alt="..." />
               <span style={{ fontWeight: "600" }} className="ms-2">Sarthak Kamra</span>
-              <img src={views}  style={{ marginLeft: "318px"}} className="me-2 mt-1 align-middle" alt="..." />
-              <span className="align-middle fw-medium" style={{fontSize:"14px"}}>1.4k views</span>
-              <img src={sharebutton} className="ms-5" alt="..." />
-            </div>
+              <img src={views}  style={{ marginLeft: "318px"}} className="me-2 mt-1 align-middle hideimg" alt="..." />
+              <span className="align-middle fw-medium hideimg" style={{fontSize:"14px"}}>1.4k views</span>
+              
+             { imageSrc ? <button className="p-2" style ={{backgroundColor:"#F1F3F5",color:"#212529",marginLeft:"7rem",border:"none"}}><img className="pe-2" src={sharebutton}   alt="..." />Share</button>:<img src={sharebutton} className="ms-5"  alt="..." />
+      }       </div>
           </div>
         </div>
 
 
       </div>
-      {/* <img src={LOGIN} className="logininmobile loginpen"></img> */}
-      
-      {isImageVisible && <img src={LOGIN} alt="Your Image" />}
+      <Mobilelogin></Mobilelogin>
+
+    
     </>
   )
 }
